@@ -14,7 +14,7 @@
           <ion-label>
             <ion-icon name="mail" color="danger"></ion-icon>
             <ion-text style="font-size: 18px;">Correo Electronico</ion-text>
-            <ion-input type="text" [ngClass]="{'invalid-input': isEmailInvalid }" formControlName="correo" class="input-login"></ion-input>
+            <ion-input type="text" [ngClass]="{'invalid-input': isEmailInvalid || isEmailRequired }" formControlName="correo" class="input-login"></ion-input>
             <ion-note color="danger" *ngIf="isEmailInvalid || isEmailRequired">
               <span *ngIf="isEmailInvalid">El correo es Invalido!</span>
               <span *ngIf="isEmailRequired">El campo es requerido!</span>
